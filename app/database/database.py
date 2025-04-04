@@ -21,6 +21,8 @@ def execute_query(query, params=None):
         cur.execute(query,params)
         results = cur.fetchall()
 
+        print("Conexão bem-sucedida!")
+        cur.close()
         con.close()
         return results
     except  Exception as e:

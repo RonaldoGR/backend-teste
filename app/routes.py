@@ -15,6 +15,7 @@ def home():
 def teste(parametro):
     if parametro == '2024':
        resultados = get_tabela_2024()
+       print(f"DEBUG - Resultados 2024: {resultados}")
        return jsonify({ "TABELA 2024": resultados })
         
     if parametro == 'trimestre2024':
