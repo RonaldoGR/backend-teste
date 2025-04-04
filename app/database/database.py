@@ -1,6 +1,9 @@
 import psycopg2
 from psycopg2.extras import RealDictCursor
 import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 DATABASE_CONFIG = {
     "dbname": "db_teste_hl4r",
@@ -9,6 +12,8 @@ DATABASE_CONFIG = {
     "host":"dpg-cvnr9bpr0fns73ef9olg-a.ohio-postgres.render.com",
     "port":"5432"
 }
+
+print("DEBUG - DATABASE_PASSWORD:", os.getenv("DATABASE_PASSWORD"))
 
 def get_connection():
     return psycopg2.connect(**DATABASE_CONFIG)

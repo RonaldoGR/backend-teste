@@ -3,6 +3,7 @@ from app.database.queries import QUERY_TABELA_2024, QUERY_TRIMESTRE_2024,QUERY_T
 
 def get_tabela_2024():
     resultados = execute_query(QUERY_TABELA_2024)
+    print(f"Resultados brutos da query: {resultados}")
 
     return [
             {
