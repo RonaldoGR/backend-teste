@@ -1,11 +1,12 @@
 import psycopg2
 from psycopg2.extras import RealDictCursor
+import os
 
 DATABASE_CONFIG = {
-    "dbname": "teste",
-    "user": "postgres",
-    "password":"sql123",
-    "host":"172.23.192.1",
+    "dbname": "db_teste_hl4r",
+    "user": "db_teste_hl4r_user",
+    "password":os.getenv("DATABASE_PASSWORD"),
+    "host":"dpg-cvnr9bpr0fns73ef9olg-a.ohio-postgres.render.com",
     "port":"5432"
 }
 
