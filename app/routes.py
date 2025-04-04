@@ -17,4 +17,4 @@ def teste(parametro):
     if parametro == 'trimestre2023':
             resultados = get_trimestre_2023()
             return jsonify({ "TRIMESTRE 2023": resultados })
-
+    return jsonify({ "erro": "Parâmetro inválido" }), 400
