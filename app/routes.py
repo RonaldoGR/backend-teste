@@ -4,6 +4,13 @@ from app.services import get_tabela_2024, get_trimestre_2024,get_trimestre_2023
 
 bp = Blueprint("routes", __name__)
 
+
+@bp.route("/")
+def home():
+    return jsonify({
+         "mensagem": "API teste"
+         ""})
+
 @bp.route("/<parametro>")
 def teste(parametro):
     if parametro == '2024':
